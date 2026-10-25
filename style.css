@@ -1,0 +1,134 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #222;
+}
+
+.container {
+  width: 100%;
+  max-width: 550px;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px #0004;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 14px;
+  cursor: pointer;
+  background: #5267df;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 22px 0;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  background: #e9edff;
+  color: #3949ab;
+}
+
+#list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.task-text {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+#list li.done .task-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+#list .toggle {
+  background: #198754;
+}
+
+#list .delete {
+  background: #dc3545;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+#count {
+  color: #555;
+}
+
+#clear {
+  background: #555;
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding: 20px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+}
